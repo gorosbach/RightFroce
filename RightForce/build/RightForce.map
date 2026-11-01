@@ -1,0 +1,722 @@
+sections
+2400 - 5470 : DATA, code
+2aff - 9038 : DATA, data
+9038 - 9a8e : BSS, bss
+9a90 - 9c00 : HEAP, heap
+9c00 - 9efe : STACK, stack
+00f7 - 00f7 : ZEROPAGE, zeropage
+0880 - 0b30 : DATA, lowcode
+1000 - 2130 : DATA, music
+0801 - 0853 : DATA, startup
+a000 - a000 : SSTACK, sstack
+a000 - a000 : SSTACK, memcpy@stack
+a000 - a000 : SSTACK, backupTitleMusic@stack
+a000 - a000 : SSTACK, memset@stack
+a000 - a000 : SSTACK, oscar_expand_lzo@stack
+a000 - a000 : SSTACK, random16@stack
+a000 - a000 : SSTACK, starsInit@stack
+a000 - a000 : SSTACK, backgroundInit@stack
+a000 - a000 : SSTACK, planetInit@stack
+a000 - a000 : SSTACK, clearfoes@stack
+a000 - a000 : SSTACK, clearPlayerShots@stack
+a000 - a000 : SSTACK, reset@stack
+9f00 - a000 : SSTACK, oscar_expand_lzo_buf@stack
+9f00 - 9f00 : SSTACK, titleScreen@stack
+a000 - a000 : SSTACK, irqInit@stack
+a000 - a000 : SSTACK, framewait@stack
+a000 - a000 : SSTACK, joy_poll@stack
+a000 - a000 : SSTACK, space@stack
+a000 - a000 : SSTACK, spritesOff@stack
+a000 - a000 : SSTACK, startGame@stack
+9f00 - 9f00 : SSTACK, returnToTitle@stack
+a000 - a000 : SSTACK, showGameOver@stack
+a000 - a000 : SSTACK, sound@stack
+a000 - a000 : SSTACK, damage@stack
+a000 - a000 : SSTACK, updateRocks@stack
+a000 - a000 : SSTACK, spawnFormation@stack
+a000 - a000 : SSTACK, giveLoot@stack
+a000 - a000 : SSTACK, dropLoot@stack
+a000 - a000 : SSTACK, award@stack
+a000 - a000 : SSTACK, collectLoot@stack
+9ff3 - a000 : SSTACK, gameUpdate@stack
+a000 - a000 : SSTACK, encounter@stack
+a000 - a000 : SSTACK, planetSpawn@stack
+9ff6 - a000 : SSTACK, planetUpdate@stack
+a000 - a000 : SSTACK, starsUpdate@stack
+a000 - a000 : SSTACK, spriteBegin@stack
+a000 - a000 : SSTACK, renderGame@stack
+a000 - a000 : SSTACK, spritePublish@stack
+a000 - a000 : SSTACK, publishGame@stack
+9ffd - a000 : SSTACK, number@stack
+9ffd - 9ffd : SSTACK, hud@stack
+a000 - a000 : SSTACK, weaponHud@stack
+9efe - 9f00 : SSTACK, main@stack
+
+regions
+2400 - 9c00 : 9038, 768e, main
+0880 - 1000 : 0b30, 02b0, lowcode
+1000 - 2130 : 2130, 1130, music
+00f7 - 00ff : 0000, 0000, zeropage
+0801 - 0880 : 0853, 0052, startup
+
+objects
+00f7 - 00f7 : ZeroEnd, END:zeropage
+00f7 - 00f7 : ZeroStart, START:zeropage
+0801 - 0853 : startup, NATIVE_CODE:startup
+0880 - 08a2 : backupTitleMusic, NATIVE_CODE:lowcode
+08a2 - 08ee : titleScreen, NATIVE_CODE:lowcode
+08ee - 096f : startGame, NATIVE_CODE:lowcode
+096f - 09b8 : returnToTitle, NATIVE_CODE:lowcode
+09b8 - 0abc : showGameOver, NATIVE_CODE:lowcode
+0abc - 0b30 : scanShotTargets, NATIVE_CODE:lowcode
+1000 - 2130 : music, DATA:music
+2400 - 2570 : main, NATIVE_CODE:code
+2570 - 259f : memcpy, NATIVE_CODE:code
+259f - 25c3 : memset, NATIVE_CODE:code
+25c3 - 2632 : oscar_expand_lzo, NATIVE_CODE:code
+2632 - 27a0 : starsInit, NATIVE_CODE:code
+27a0 - 27be : random16, NATIVE_CODE:code
+27be - 27d5 : planetInit, NATIVE_CODE:code
+27d5 - 28f9 : backgroundInit, NATIVE_CODE:code
+28f9 - 29b3 : reset, NATIVE_CODE:code
+29b3 - 29df : clearfoes, NATIVE_CODE:code
+29df - 29f6 : clearPlayerShots, NATIVE_CODE:code
+29f6 - 2a17 : musicInit, NATIVE_CODE:code
+2a17 - 2aa4 : oscar_expand_lzo_buf, NATIVE_CODE:code
+2aa4 - 2ae2 : irqInit, NATIVE_CODE:code
+2ae2 - 2ae4 : nmiReturn, NATIVE_CODE:code
+2ae4 - 2aed : sound, NATIVE_CODE:code
+2aed - 2afb : collectLoot, NATIVE_CODE:code
+2afb - 2aff : spritePublish, NATIVE_CODE:code
+2aff - 2b00 : spentry, DATA:data
+2b00 - 2bef : rasterIRQ, NATIVE_CODE:code
+2bef - 2d1a : applySprite, NATIVE_CODE:code
+2d1a - 2d45 : musicPlay, NATIVE_CODE:code
+2d45 - 2dd6 : soundPlay, NATIVE_CODE:code
+2dd6 - 2df5 : framewait, NATIVE_CODE:code
+2df5 - 2e33 : joy_poll, NATIVE_CODE:code
+2e33 - 2e68 : space, NATIVE_CODE:code
+2e68 - 2e8d : spritesOff, NATIVE_CODE:code
+2e8d - 3b35 : gameUpdate, NATIVE_CODE:code
+3b35 - 3caa : updateRocks, NATIVE_CODE:code
+3caa - 3cec : damage, NATIVE_CODE:code
+3cec - 3eaa : spawnFormation, NATIVE_CODE:code
+3eaa - 3ef3 : dropLoot, NATIVE_CODE:code
+3ef3 - 3f28 : giveLoot, NATIVE_CODE:code
+3f28 - 3f57 : award, NATIVE_CODE:code
+3f57 - 4356 : encounter, NATIVE_CODE:code
+4356 - 4695 : planetUpdate, NATIVE_CODE:code
+4695 - 4733 : planetSpawn, NATIVE_CODE:code
+4733 - 477e : planetDecode, NATIVE_CODE:code
+477e - 47db : planetDraw, NATIVE_CODE:code
+47db - 482a : starsUpdate, NATIVE_CODE:code
+482a - 4928 : starsStep, NATIVE_CODE:code
+4928 - 4e27 : renderGame, NATIVE_CODE:code
+4e27 - 4e9c : queueSprite, NATIVE_CODE:code
+4e9c - 4ed8 : publishGame, NATIVE_CODE:code
+4ed8 - 5052 : buildSprites, NATIVE_CODE:code
+5052 - 511b : emitSprite, NATIVE_CODE:code
+511b - 520d : hud, NATIVE_CODE:code
+520d - 52a6 : number, NATIVE_CODE:code
+52a6 - 52e6 : weaponHud, NATIVE_CODE:code
+52e6 - 531e : mul16by8, NATIVE_CODE:code
+531e - 533c : divs16, NATIVE_CODE:code
+533c - 534a : negaccu, NATIVE_CODE:code
+534a - 5358 : negtmp, NATIVE_CODE:code
+5358 - 53e3 : divmod, NATIVE_CODE:code
+53e3 - 5402 : mods16, NATIVE_CODE:code
+5402 - 5410 : negtmpb, NATIVE_CODE:code
+5410 - 5420 : __shltab65535L, DATA:code
+5420 - 5430 : __shltab65535H, DATA:code
+5430 - 5438 : __multab12L, DATA:code
+5438 - 5445 : __multab320L, DATA:code
+5445 - 5452 : __multab320H, DATA:code
+5452 - 5458 : __multab7L, DATA:code
+5458 - 545b : __multab36L, DATA:code
+545b - 5463 : __multab6L, DATA:code
+5463 - 5466 : __multab64L, DATA:code
+5466 - 5470 : __multab5L, DATA:code
+5470 - 593b : spriteArt, DATA:data
+593b - 593d : rng, DATA:data
+593d - 5b37 : nebulaArt, DATA:data
+5b37 - 5b38 : wave, DATA:data
+5b38 - 5b39 : shownWeapon, DATA:data
+5b39 - 6e21 : splashBits, DATA:data
+6e21 - 70ee : splashScreen, DATA:data
+70ee - 7373 : splashColors, DATA:data
+7373 - 737b : maskTable, DATA:data
+737b - 7383 : inverseMasks, DATA:data
+7383 - 768e : gameMusic, DATA:data
+768e - 768f : shownClock, DATA:data
+768f - 7690 : shownWarp, DATA:data
+7690 - 7691 : shownLives, DATA:data
+7691 - 7692 : shownLevel, DATA:data
+7692 - 7694 : shownKills, DATA:data
+7694 - 76cc : overLetters, DATA:data
+76cc - 76ec : sine, DATA:data
+76ec - 76ef : *, DATA:data
+76ef - 76f5 : *, DATA:data
+76f5 - 76f9 : shipFrames, DATA:data
+76f9 - 76ff : waveColors, DATA:data
+76ff - 7700 : planetLine, DATA:bss
+7700 - 7720 : gentleSine, DATA:data
+7720 - 7b30 : planetPalette, DATA:data
+7b30 - 8d73 : planetPacked, DATA:data
+8d73 - 8ef3 : planetIndex, DATA:data
+8ef3 - 8f33 : flagXX, DATA:data
+8f33 - 8f73 : flagYY, DATA:data
+8f73 - 8fb3 : flagMulti, DATA:data
+8fb3 - 8fe5 : digits, DATA:data
+8fe5 - 8ff1 : rowlo, DATA:bss
+8ff1 - 8ffd : rowhi, DATA:bss
+8ffd - 8ffe : planetSlice, DATA:bss
+8ffe - 8fff : planetState, DATA:bss
+8fff - 9000 : level, DATA:bss
+9000 - 9038 : bitshift, DATA:data
+9038 - 9038 : BSSStart, START:bss
+9038 - 9060 : colofflo, DATA:bss
+9060 - 9088 : coloffhi, DATA:bss
+9088 - 90a8 : mask0, DATA:bss
+90a8 - 90c8 : mask1, DATA:bss
+90c8 - 90d4 : colorlo, DATA:bss
+90d4 - 90e0 : colorhi, DATA:bss
+90e0 - 90ec : starcol, DATA:bss
+90ec - 90f8 : starphase, DATA:bss
+90f8 - 90fa : planetWait, DATA:bss
+90fa - 90fc : kills, DATA:bss
+90fc - 90fd : lives, DATA:bss
+90fd - 90fe : warp, DATA:bss
+90fe - 90ff : warptime, DATA:bss
+90ff - 9100 : charge, DATA:bss
+9100 - 910c : oldcol, DATA:bss
+910c - 9118 : oldlo, DATA:bss
+9118 - 9124 : oldhi, DATA:bss
+9124 - 9130 : stargroup, DATA:bss
+9130 - 913c : maskbase, DATA:bss
+913c - 9148 : starcolor, DATA:bss
+9148 - 9530 : backColors, DATA:bss
+9530 - 9531 : invul, DATA:bss
+9531 - 9532 : mode, DATA:bss
+9532 - 9533 : playerBoom, DATA:bss
+9533 - 9534 : bossDying, DATA:bss
+9534 - 9535 : boss, DATA:bss
+9535 - 9536 : spawnCount, DATA:bss
+9536 - 9537 : waveKills, DATA:bss
+9537 - 9539 : px, DATA:bss
+9539 - 953b : shipY, DATA:bss
+953b - 953d : py, DATA:bss
+953d - 953f : timer, DATA:bss
+953f - 9540 : cooldown, DATA:bss
+9540 - 956a : enemy, DATA:bss
+956a - 9570 : boom, DATA:bss
+9570 - 9585 : bolt, DATA:bss
+9585 - 9586 : formationLeft, DATA:bss
+9586 - 9587 : waveSubTicks, DATA:bss
+9587 - 9588 : waveSeconds, DATA:bss
+9588 - 9589 : tributeActive, DATA:bss
+9589 - 958a : warpTrips, DATA:bss
+958a - 958b : aiPhase, DATA:bss
+958b - 958c : sideCooldown, DATA:bss
+958c - 958d : sideCount, DATA:bss
+958d - 95b0 : shot, DATA:bss
+95b0 - 95b5 : shotMask, DATA:bss
+95b5 - 95b6 : weaponLevel, DATA:bss
+95b6 - 95bd : loot, DATA:bss
+95bd - 95be : lootCounter, DATA:bss
+95be - 95d3 : rock, DATA:bss
+95d3 - 95d9 : rockWait, DATA:bss
+95d9 - 95da : hudDirty, DATA:bss
+95da - 95e6 : gameZP, DATA:bss
+95e6 - 95f2 : musicZP, DATA:bss
+95f2 - 95f3 : irqPhase, DATA:bss
+95f3 - 95f4 : tweenFrame, DATA:bss
+95f4 - 95f5 : actualMSB, DATA:bss
+95f5 - 95f6 : spriteReady, DATA:bss
+95f6 - 95f7 : readyBase, DATA:bss
+95f7 - 95f8 : irqBase, DATA:bss
+95f8 - 95f9 : readyCount, DATA:bss
+95f9 - 95fa : irqCount, DATA:bss
+95fa - 95fb : irqIndex, DATA:bss
+95fb - 95fc : irqLimit, DATA:bss
+95fc - 95fd : irqFirst, DATA:bss
+95fd - 9629 : rs, DATA:bss
+9629 - 9655 : rx, DATA:bss
+9655 - 9681 : ry, DATA:bss
+9681 - 96ad : ri, DATA:bss
+96ad - 96d9 : rc, DATA:bss
+96d9 - 9705 : rm, DATA:bss
+9705 - 9731 : rxc, DATA:bss
+9731 - 975d : ryc, DATA:bss
+975d - 9789 : rmu, DATA:bss
+9789 - 97b5 : re, DATA:bss
+97b5 - 97b6 : drawSlot, DATA:bss
+97b6 - 97b7 : drawBit, DATA:bss
+97b7 - 97b8 : targetHi, DATA:bss
+97b8 - 97b9 : drawHi, DATA:bss
+97b9 - 97ba : targetLo, DATA:bss
+97ba - 97bb : drawLo, DATA:bss
+97bb - 97bc : drawY, DATA:bss
+97bc - 97e8 : rObject, DATA:bss
+97e8 - 97e9 : drawID, DATA:bss
+97e9 - 97ea : tweenDelta, DATA:bss
+97ea - 97eb : sfxRequest, DATA:bss
+97eb - 97ec : sfxKind, DATA:bss
+97ec - 97ed : sfxTime, DATA:bss
+97ed - 97ee : ticks, DATA:bss
+97ee - 97ef : irqSame, DATA:bss
+97ef - 97f0 : lastTick, DATA:bss
+97f0 - 97f2 : missedFrames, DATA:bss
+97f2 - 97f4 : joyy, DATA:bss
+97f4 - 97f6 : joyx, DATA:bss
+97f6 - 97f8 : joyb, DATA:bss
+97f8 - 97f9 : keySample, DATA:bss
+97f9 - 97fa : frame, DATA:bss
+97fa - 97fb : titleBlocked, DATA:bss
+97fb - 97fc : vcount, DATA:bss
+97fc - 97fe : gameOverTime, DATA:bss
+97fe - 97ff : spaceold, DATA:bss
+97ff - 9800 : tributeY, DATA:bss
+9800 - 981f : lastObjectValid, DATA:bss
+981f - 983e : lastObjectX, DATA:bss
+983e - 985d : lastObjectHi, DATA:bss
+985d - 9889 : rline, DATA:bss
+9889 - 988b : tributeX, DATA:bss
+988b - 988d : sideY, DATA:bss
+988d - 9893 : elite, DATA:bss
+9893 - 9894 : formationIndex, DATA:bss
+9894 - 9895 : formationBase, DATA:bss
+9895 - 9896 : formationSeed, DATA:bss
+9896 - 9897 : formationSide, DATA:bss
+9897 - 9898 : formationKind, DATA:bss
+9898 - 989e : enemyBaseY, DATA:bss
+989e - 98a4 : enemyPhase, DATA:bss
+98a4 - 98aa : enemySeen, DATA:bss
+98aa - 98b0 : hp, DATA:bss
+98b0 - 98b6 : enemyKind, DATA:bss
+98b6 - 98bc : fireTimer, DATA:bss
+98bc - 98bf : boltSeen, DATA:bss
+98bf - 98c1 : hitX, DATA:bss
+98c1 - 98c2 : hitY, DATA:bss
+98c2 - 98c3 : hitWidth, DATA:bss
+98c3 - 98c4 : hitBias, DATA:bss
+98c4 - 98c5 : hitSpan, DATA:bss
+98c5 - 98c6 : hitExclude, DATA:bss
+98c6 - 98c7 : hitTargets, DATA:bss
+98c7 - 98c8 : hitDelta, DATA:bss
+98c8 - 98ce : flash, DATA:bss
+98ce - 98cf : lootType, DATA:bss
+98cf - 98d0 : lootBase, DATA:bss
+98d0 - 98d2 : lootTime, DATA:bss
+98d2 - 98d4 : bossClock, DATA:bss
+98d4 - 98d5 : bossHP, DATA:bss
+98d5 - 98d7 : bossX, DATA:bss
+98d7 - 98d9 : bossY, DATA:bss
+98d9 - 98da : planetVariant, DATA:bss
+98da - 98db : planetHeight, DATA:bss
+98db - 98dc : planetChunkRows, DATA:bss
+98dc - 98de : planetPaletteBase, DATA:bss
+98de - 98df : planetY, DATA:bss
+98df - 98e1 : planetX, DATA:bss
+98e1 - 98e2 : planetChunkNumber, DATA:bss
+98e2 - 98e3 : planetPaletteRow, DATA:bss
+98e3 - 98e4 : planetRowsPerFrame, DATA:bss
+98e4 - 98e5 : planetBufferOffset, DATA:bss
+98e5 - 98e6 : planetSkip, DATA:bss
+98e6 - 98e7 : planetStart, DATA:bss
+98e7 - 98e8 : planetCount, DATA:bss
+98e8 - 98ea : planetDecodeSrc, DATA:bss
+98ea - 98eb : decodeLimit, DATA:bss
+98eb - 98ec : decodeTag, DATA:bss
+98ec - 98ed : decodeRun, DATA:bss
+98ed - 98ee : planetReadIndex, DATA:bss
+98ee - 98ef : planetRows, DATA:bss
+98ef - 98f0 : planetColumns, DATA:bss
+98f0 - 98f1 : longstars, DATA:bss
+98f1 - 98f2 : starFirst, DATA:bss
+98f2 - 98f3 : starStride, DATA:bss
+98f3 - 98f6 : speed, DATA:bss
+98f6 - 98f7 : queueID, DATA:bss
+98f7 - 98f8 : queueShow, DATA:bss
+98f8 - 98fa : queueX, DATA:bss
+98fa - 98fb : queueY, DATA:bss
+98fb - 98fc : queueImage, DATA:bss
+98fc - 98fd : queueColor, DATA:bss
+98fd - 98fe : queueFlags, DATA:bss
+98fe - 98ff : queuePriority, DATA:bss
+98ff - 9900 : queueResult, DATA:bss
+9900 - 9928 : planetLo, DATA:bss
+9928 - 9950 : planetHi, DATA:bss
+9950 - 9982 : planetChunk, DATA:bss
+9982 - 9998 : vy, DATA:bss
+9998 - 99ae : vxLo, DATA:bss
+99ae - 99c4 : vxHi, DATA:bss
+99c4 - 99da : vObject, DATA:bss
+99da - 99f0 : vi, DATA:bss
+99f0 - 9a06 : vc, DATA:bss
+9a06 - 9a1c : vf, DATA:bss
+9a1c - 9a32 : vp, DATA:bss
+9a32 - 9a48 : accepted, DATA:bss
+9a48 - 9a4e : enemyDraw, DATA:bss
+9a4e - 9a51 : boltDraw, DATA:bss
+9a51 - 9a52 : buildI, DATA:bss
+9a52 - 9a53 : buildObject, DATA:bss
+9a53 - 9a54 : buildJ, DATA:bss
+9a54 - 9a55 : buildY, DATA:bss
+9a55 - 9a6b : order, DATA:bss
+9a6b - 9a6c : buildBase, DATA:bss
+9a6c - 9a6d : hwMSB, DATA:bss
+9a6d - 9a6e : hwEnable, DATA:bss
+9a6e - 9a6f : hwXX, DATA:bss
+9a6f - 9a70 : hwYY, DATA:bss
+9a70 - 9a71 : hwMulti, DATA:bss
+9a71 - 9a72 : buildCount, DATA:bss
+9a72 - 9a7a : freeAt, DATA:bss
+9a7a - 9a82 : owner, DATA:bss
+9a82 - 9a83 : buildSearchY, DATA:bss
+9a83 - 9a84 : buildSlot, DATA:bss
+9a84 - 9a85 : buildBest, DATA:bss
+9a85 - 9a86 : buildVictim, DATA:bss
+9a86 - 9a88 : spriteDrops, DATA:bss
+9a88 - 9a89 : emitSlot, DATA:bss
+9a89 - 9a8a : emitObject, DATA:bss
+9a8a - 9a8b : emitIndex, DATA:bss
+9a8b - 9a8c : emitMask, DATA:bss
+9a8c - 9a8d : emitInverse, DATA:bss
+9a8d - 9a8e : emitFlags, DATA:bss
+9a8e - 9a8e : BSSEnd, END:bss
+9efe - 9f00 : main@stack, BSS:main@stack
+9efe - 9efe : StackEnd, END:stack
+9f00 - a000 : buf, BSS:oscar_expand_lzo_buf@stack
+9ff3 - a000 : gameUpdate@stack, BSS:gameUpdate@stack
+9ff6 - a000 : planetUpdate@stack, BSS:planetUpdate@stack
+9ffd - a000 : d, BSS:number@stack
+
+objects by size
+5b39 (12e8) : splashBits, DATA:data
+7b30 (1243) : planetPacked, DATA:data
+1000 (1130) : music, DATA:music
+2e8d (0ca8) : gameUpdate, NATIVE_CODE:code
+4928 (04ff) : renderGame, NATIVE_CODE:code
+5470 (04cb) : spriteArt, DATA:data
+7720 (0410) : planetPalette, DATA:data
+3f57 (03ff) : encounter, NATIVE_CODE:code
+9148 (03e8) : backColors, DATA:bss
+4356 (033f) : planetUpdate, NATIVE_CODE:code
+7383 (030b) : gameMusic, DATA:data
+6e21 (02cd) : splashScreen, DATA:data
+70ee (0285) : splashColors, DATA:data
+593d (01fa) : nebulaArt, DATA:data
+3cec (01be) : spawnFormation, NATIVE_CODE:code
+8d73 (0180) : planetIndex, DATA:data
+4ed8 (017a) : buildSprites, NATIVE_CODE:code
+3b35 (0175) : updateRocks, NATIVE_CODE:code
+2400 (0170) : main, NATIVE_CODE:code
+2632 (016e) : starsInit, NATIVE_CODE:code
+2bef (012b) : applySprite, NATIVE_CODE:code
+27d5 (0124) : backgroundInit, NATIVE_CODE:code
+09b8 (0104) : showGameOver, NATIVE_CODE:lowcode
+9f00 (0100) : buf, BSS:oscar_expand_lzo_buf@stack
+482a (00fe) : starsStep, NATIVE_CODE:code
+511b (00f2) : hud, NATIVE_CODE:code
+2b00 (00ef) : rasterIRQ, NATIVE_CODE:code
+5052 (00c9) : emitSprite, NATIVE_CODE:code
+28f9 (00ba) : reset, NATIVE_CODE:code
+4695 (009e) : planetSpawn, NATIVE_CODE:code
+520d (0099) : number, NATIVE_CODE:code
+2d45 (0091) : soundPlay, NATIVE_CODE:code
+2a17 (008d) : oscar_expand_lzo_buf, NATIVE_CODE:code
+5358 (008b) : divmod, NATIVE_CODE:code
+08ee (0081) : startGame, NATIVE_CODE:lowcode
+4e27 (0075) : queueSprite, NATIVE_CODE:code
+0abc (0074) : scanShotTargets, NATIVE_CODE:lowcode
+25c3 (006f) : oscar_expand_lzo, NATIVE_CODE:code
+477e (005d) : planetDraw, NATIVE_CODE:code
+0801 (0052) : startup, NATIVE_CODE:startup
+47db (004f) : starsUpdate, NATIVE_CODE:code
+08a2 (004c) : titleScreen, NATIVE_CODE:lowcode
+4733 (004b) : planetDecode, NATIVE_CODE:code
+096f (0049) : returnToTitle, NATIVE_CODE:lowcode
+3eaa (0049) : dropLoot, NATIVE_CODE:code
+3caa (0042) : damage, NATIVE_CODE:code
+52a6 (0040) : weaponHud, NATIVE_CODE:code
+8ef3 (0040) : flagXX, DATA:data
+8f33 (0040) : flagYY, DATA:data
+8f73 (0040) : flagMulti, DATA:data
+2aa4 (003e) : irqInit, NATIVE_CODE:code
+2df5 (003e) : joy_poll, NATIVE_CODE:code
+4e9c (003c) : publishGame, NATIVE_CODE:code
+52e6 (0038) : mul16by8, NATIVE_CODE:code
+7694 (0038) : overLetters, DATA:data
+9000 (0038) : bitshift, DATA:data
+2e33 (0035) : space, NATIVE_CODE:code
+3ef3 (0035) : giveLoot, NATIVE_CODE:code
+8fb3 (0032) : digits, DATA:data
+9950 (0032) : planetChunk, DATA:bss
+2570 (002f) : memcpy, NATIVE_CODE:code
+3f28 (002f) : award, NATIVE_CODE:code
+29b3 (002c) : clearfoes, NATIVE_CODE:code
+95fd (002c) : rs, DATA:bss
+9629 (002c) : rx, DATA:bss
+9655 (002c) : ry, DATA:bss
+9681 (002c) : ri, DATA:bss
+96ad (002c) : rc, DATA:bss
+96d9 (002c) : rm, DATA:bss
+9705 (002c) : rxc, DATA:bss
+9731 (002c) : ryc, DATA:bss
+975d (002c) : rmu, DATA:bss
+9789 (002c) : re, DATA:bss
+97bc (002c) : rObject, DATA:bss
+985d (002c) : rline, DATA:bss
+2d1a (002b) : musicPlay, NATIVE_CODE:code
+9540 (002a) : enemy, DATA:bss
+9038 (0028) : colofflo, DATA:bss
+9060 (0028) : coloffhi, DATA:bss
+9900 (0028) : planetLo, DATA:bss
+9928 (0028) : planetHi, DATA:bss
+2e68 (0025) : spritesOff, NATIVE_CODE:code
+259f (0024) : memset, NATIVE_CODE:code
+958d (0023) : shot, DATA:bss
+0880 (0022) : backupTitleMusic, NATIVE_CODE:lowcode
+29f6 (0021) : musicInit, NATIVE_CODE:code
+76cc (0020) : sine, DATA:data
+7700 (0020) : gentleSine, DATA:data
+9088 (0020) : mask0, DATA:bss
+90a8 (0020) : mask1, DATA:bss
+2dd6 (001f) : framewait, NATIVE_CODE:code
+53e3 (001f) : mods16, NATIVE_CODE:code
+9800 (001f) : lastObjectValid, DATA:bss
+981f (001f) : lastObjectX, DATA:bss
+983e (001f) : lastObjectHi, DATA:bss
+27a0 (001e) : random16, NATIVE_CODE:code
+531e (001e) : divs16, NATIVE_CODE:code
+27be (0017) : planetInit, NATIVE_CODE:code
+29df (0017) : clearPlayerShots, NATIVE_CODE:code
+9982 (0016) : vy, DATA:bss
+9998 (0016) : vxLo, DATA:bss
+99ae (0016) : vxHi, DATA:bss
+99c4 (0016) : vObject, DATA:bss
+99da (0016) : vi, DATA:bss
+99f0 (0016) : vc, DATA:bss
+9a06 (0016) : vf, DATA:bss
+9a1c (0016) : vp, DATA:bss
+9a32 (0016) : accepted, DATA:bss
+9a55 (0016) : order, DATA:bss
+9570 (0015) : bolt, DATA:bss
+95be (0015) : rock, DATA:bss
+5410 (0010) : __shltab65535L, DATA:code
+5420 (0010) : __shltab65535H, DATA:code
+2aed (000e) : collectLoot, NATIVE_CODE:code
+533c (000e) : negaccu, NATIVE_CODE:code
+534a (000e) : negtmp, NATIVE_CODE:code
+5402 (000e) : negtmpb, NATIVE_CODE:code
+5438 (000d) : __multab320L, DATA:code
+5445 (000d) : __multab320H, DATA:code
+9ff3 (000d) : gameUpdate@stack, BSS:gameUpdate@stack
+8fe5 (000c) : rowlo, DATA:bss
+8ff1 (000c) : rowhi, DATA:bss
+90c8 (000c) : colorlo, DATA:bss
+90d4 (000c) : colorhi, DATA:bss
+90e0 (000c) : starcol, DATA:bss
+90ec (000c) : starphase, DATA:bss
+9100 (000c) : oldcol, DATA:bss
+910c (000c) : oldlo, DATA:bss
+9118 (000c) : oldhi, DATA:bss
+9124 (000c) : stargroup, DATA:bss
+9130 (000c) : maskbase, DATA:bss
+913c (000c) : starcolor, DATA:bss
+95da (000c) : gameZP, DATA:bss
+95e6 (000c) : musicZP, DATA:bss
+5466 (000a) : __multab5L, DATA:code
+9ff6 (000a) : planetUpdate@stack, BSS:planetUpdate@stack
+2ae4 (0009) : sound, NATIVE_CODE:code
+5430 (0008) : __multab12L, DATA:code
+545b (0008) : __multab6L, DATA:code
+7373 (0008) : maskTable, DATA:data
+737b (0008) : inverseMasks, DATA:data
+9a72 (0008) : freeAt, DATA:bss
+9a7a (0008) : owner, DATA:bss
+95b6 (0007) : loot, DATA:bss
+5452 (0006) : __multab7L, DATA:code
+76f9 (0006) : waveColors, DATA:data
+956a (0006) : boom, DATA:bss
+95d3 (0006) : rockWait, DATA:bss
+988d (0006) : elite, DATA:bss
+9898 (0006) : enemyBaseY, DATA:bss
+989e (0006) : enemyPhase, DATA:bss
+98a4 (0006) : enemySeen, DATA:bss
+98aa (0006) : hp, DATA:bss
+98b0 (0006) : enemyKind, DATA:bss
+98b6 (0006) : fireTimer, DATA:bss
+98c8 (0006) : flash, DATA:bss
+9a48 (0006) : enemyDraw, DATA:bss
+95b0 (0005) : shotMask, DATA:bss
+2afb (0004) : spritePublish, NATIVE_CODE:code
+76f5 (0004) : shipFrames, DATA:data
+5458 (0003) : __multab36L, DATA:code
+5463 (0003) : __multab64L, DATA:code
+98bc (0003) : boltSeen, DATA:bss
+98f3 (0003) : speed, DATA:bss
+9a4e (0003) : boltDraw, DATA:bss
+9ffd (0003) : d, BSS:number@stack
+2ae2 (0002) : nmiReturn, NATIVE_CODE:code
+593b (0002) : rng, DATA:data
+7692 (0002) : shownKills, DATA:data
+90f8 (0002) : planetWait, DATA:bss
+90fa (0002) : kills, DATA:bss
+9537 (0002) : px, DATA:bss
+9539 (0002) : shipY, DATA:bss
+953b (0002) : py, DATA:bss
+953d (0002) : timer, DATA:bss
+97f0 (0002) : missedFrames, DATA:bss
+97f2 (0002) : joyy, DATA:bss
+97f4 (0002) : joyx, DATA:bss
+97f6 (0002) : joyb, DATA:bss
+97fc (0002) : gameOverTime, DATA:bss
+9889 (0002) : tributeX, DATA:bss
+988b (0002) : sideY, DATA:bss
+98bf (0002) : hitX, DATA:bss
+98d0 (0002) : lootTime, DATA:bss
+98d2 (0002) : bossClock, DATA:bss
+98d5 (0002) : bossX, DATA:bss
+98d7 (0002) : bossY, DATA:bss
+98dc (0002) : planetPaletteBase, DATA:bss
+98df (0002) : planetX, DATA:bss
+98e8 (0002) : planetDecodeSrc, DATA:bss
+98f8 (0002) : queueX, DATA:bss
+9a86 (0002) : spriteDrops, DATA:bss
+9efe (0002) : main@stack, BSS:main@stack
+2aff (0001) : spentry, DATA:data
+5b37 (0001) : wave, DATA:data
+5b38 (0001) : shownWeapon, DATA:data
+768e (0001) : shownClock, DATA:data
+768f (0001) : shownWarp, DATA:data
+7690 (0001) : shownLives, DATA:data
+7691 (0001) : shownLevel, DATA:data
+76ff (0001) : planetLine, DATA:bss
+8ffd (0001) : planetSlice, DATA:bss
+8ffe (0001) : planetState, DATA:bss
+8fff (0001) : level, DATA:bss
+90fc (0001) : lives, DATA:bss
+90fd (0001) : warp, DATA:bss
+90fe (0001) : warptime, DATA:bss
+90ff (0001) : charge, DATA:bss
+9530 (0001) : invul, DATA:bss
+9531 (0001) : mode, DATA:bss
+9532 (0001) : playerBoom, DATA:bss
+9533 (0001) : bossDying, DATA:bss
+9534 (0001) : boss, DATA:bss
+9535 (0001) : spawnCount, DATA:bss
+9536 (0001) : waveKills, DATA:bss
+953f (0001) : cooldown, DATA:bss
+9585 (0001) : formationLeft, DATA:bss
+9586 (0001) : waveSubTicks, DATA:bss
+9587 (0001) : waveSeconds, DATA:bss
+9588 (0001) : tributeActive, DATA:bss
+9589 (0001) : warpTrips, DATA:bss
+958a (0001) : aiPhase, DATA:bss
+958b (0001) : sideCooldown, DATA:bss
+958c (0001) : sideCount, DATA:bss
+95b5 (0001) : weaponLevel, DATA:bss
+95bd (0001) : lootCounter, DATA:bss
+95d9 (0001) : hudDirty, DATA:bss
+95f2 (0001) : irqPhase, DATA:bss
+95f3 (0001) : tweenFrame, DATA:bss
+95f4 (0001) : actualMSB, DATA:bss
+95f5 (0001) : spriteReady, DATA:bss
+95f6 (0001) : readyBase, DATA:bss
+95f7 (0001) : irqBase, DATA:bss
+95f8 (0001) : readyCount, DATA:bss
+95f9 (0001) : irqCount, DATA:bss
+95fa (0001) : irqIndex, DATA:bss
+95fb (0001) : irqLimit, DATA:bss
+95fc (0001) : irqFirst, DATA:bss
+97b5 (0001) : drawSlot, DATA:bss
+97b6 (0001) : drawBit, DATA:bss
+97b7 (0001) : targetHi, DATA:bss
+97b8 (0001) : drawHi, DATA:bss
+97b9 (0001) : targetLo, DATA:bss
+97ba (0001) : drawLo, DATA:bss
+97bb (0001) : drawY, DATA:bss
+97e8 (0001) : drawID, DATA:bss
+97e9 (0001) : tweenDelta, DATA:bss
+97ea (0001) : sfxRequest, DATA:bss
+97eb (0001) : sfxKind, DATA:bss
+97ec (0001) : sfxTime, DATA:bss
+97ed (0001) : ticks, DATA:bss
+97ee (0001) : irqSame, DATA:bss
+97ef (0001) : lastTick, DATA:bss
+97f8 (0001) : keySample, DATA:bss
+97f9 (0001) : frame, DATA:bss
+97fa (0001) : titleBlocked, DATA:bss
+97fb (0001) : vcount, DATA:bss
+97fe (0001) : spaceold, DATA:bss
+97ff (0001) : tributeY, DATA:bss
+9893 (0001) : formationIndex, DATA:bss
+9894 (0001) : formationBase, DATA:bss
+9895 (0001) : formationSeed, DATA:bss
+9896 (0001) : formationSide, DATA:bss
+9897 (0001) : formationKind, DATA:bss
+98c1 (0001) : hitY, DATA:bss
+98c2 (0001) : hitWidth, DATA:bss
+98c3 (0001) : hitBias, DATA:bss
+98c4 (0001) : hitSpan, DATA:bss
+98c5 (0001) : hitExclude, DATA:bss
+98c6 (0001) : hitTargets, DATA:bss
+98c7 (0001) : hitDelta, DATA:bss
+98ce (0001) : lootType, DATA:bss
+98cf (0001) : lootBase, DATA:bss
+98d4 (0001) : bossHP, DATA:bss
+98d9 (0001) : planetVariant, DATA:bss
+98da (0001) : planetHeight, DATA:bss
+98db (0001) : planetChunkRows, DATA:bss
+98de (0001) : planetY, DATA:bss
+98e1 (0001) : planetChunkNumber, DATA:bss
+98e2 (0001) : planetPaletteRow, DATA:bss
+98e3 (0001) : planetRowsPerFrame, DATA:bss
+98e4 (0001) : planetBufferOffset, DATA:bss
+98e5 (0001) : planetSkip, DATA:bss
+98e6 (0001) : planetStart, DATA:bss
+98e7 (0001) : planetCount, DATA:bss
+98ea (0001) : decodeLimit, DATA:bss
+98eb (0001) : decodeTag, DATA:bss
+98ec (0001) : decodeRun, DATA:bss
+98ed (0001) : planetReadIndex, DATA:bss
+98ee (0001) : planetRows, DATA:bss
+98ef (0001) : planetColumns, DATA:bss
+98f0 (0001) : longstars, DATA:bss
+98f1 (0001) : starFirst, DATA:bss
+98f2 (0001) : starStride, DATA:bss
+98f6 (0001) : queueID, DATA:bss
+98f7 (0001) : queueShow, DATA:bss
+98fa (0001) : queueY, DATA:bss
+98fb (0001) : queueImage, DATA:bss
+98fc (0001) : queueColor, DATA:bss
+98fd (0001) : queueFlags, DATA:bss
+98fe (0001) : queuePriority, DATA:bss
+98ff (0001) : queueResult, DATA:bss
+9a51 (0001) : buildI, DATA:bss
+9a52 (0001) : buildObject, DATA:bss
+9a53 (0001) : buildJ, DATA:bss
+9a54 (0001) : buildY, DATA:bss
+9a6b (0001) : buildBase, DATA:bss
+9a6c (0001) : hwMSB, DATA:bss
+9a6d (0001) : hwEnable, DATA:bss
+9a6e (0001) : hwXX, DATA:bss
+9a6f (0001) : hwYY, DATA:bss
+9a70 (0001) : hwMulti, DATA:bss
+9a71 (0001) : buildCount, DATA:bss
+9a82 (0001) : buildSearchY, DATA:bss
+9a83 (0001) : buildSlot, DATA:bss
+9a84 (0001) : buildBest, DATA:bss
+9a85 (0001) : buildVictim, DATA:bss
+9a88 (0001) : emitSlot, DATA:bss
+9a89 (0001) : emitObject, DATA:bss
+9a8a (0001) : emitIndex, DATA:bss
+9a8b (0001) : emitMask, DATA:bss
+9a8c (0001) : emitInverse, DATA:bss
+9a8d (0001) : emitFlags, DATA:bss
+00f7 (0000) : ZeroEnd, END:zeropage
+00f7 (0000) : ZeroStart, START:zeropage
+9038 (0000) : BSSStart, START:bss
+9a8e (0000) : BSSEnd, END:bss
+9efe (0000) : StackEnd, END:stack

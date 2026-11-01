@@ -1,0 +1,7 @@
+Tool: built-in image_gen. Generated source: splash-art.png.
+Prompt:
+Create a landscape 8-bit space shooter loading screen artwork, aspect ratio 8:5. Designed to convert to Commodore 64 160x200 multicolor bitmap: chunky carefully composed pixels, limited black navy blue cyan white yellow orange red palette, high contrast, no gradients. Large yellow sleek horizontal rocket flying toward RIGHT in foreground lower-left and center, intricate metal panel textures, luminous cyan cockpit, bright white leading edge, roaring orange exhaust on left. A menacing detailed flying saucer in upper right with cyan dome and red weapons. Ringed Saturn and sparse stars in deep black background. Reserve top 28 percent as nearly black negative space for the game logo which will be added separately; reserve bottom 12 percent black for start instruction. No text, no borders, no monitor frame. Dramatic classic 1980s hand-painted game cover interpreted as crisp pixel art.
+
+Post-processing: tools/convert_splash.py adds exact title RightForce and selects three colors plus black per C64 multicolor cell, packs VIC-II bitmap and color data into assets/runtime/splash.bin. docs/images/splash-c64.png is a reconstructed preview.
+
+Readability update: bottom instructions are drawn after palette conversion as exact 5x7 white pixels on black, without antialiasing. Main illustration unchanged.
